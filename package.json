@@ -1,5 +1,5 @@
 {
-  "name": "@koumoul/vjsf",
+  "name": "@mgmt/vjsf",
   "version": "2.23.2",
   "description": "Generate forms for the vuetify UI library (vuejs) based on annotated JSON schemas.",
   "main": "dist/main.js",
@@ -7,13 +7,11 @@
     "lint": "eslint --ext js .",
     "lint-fix": "eslint --fix --ext js .",
     "build": "rm -rf dist && webpack && cp lib/VJsf.css dist/main.css",
-    "prepare": "npm run lint && npm test && npm run build && npm run doc-build",
+    "prepare": "npm run lint && npm run build",
     "postpublish": "gh-pages-multi deploy -v -s doc/dist -t latest",
     "test": "jest",
     "test-watch": "jest --watch",
     "test-update": "jest --updateSnapshot",
-    "doc-build": "(cd doc && TARGET=https://koumoul-dev.github.io/vuetify-jsonschema-form/latest/ nuxt generate)",
-    "doc-master": "(cd doc && TARGET=https://koumoul-dev.github.io/vuetify-jsonschema-form/master/ nuxt generate) && gh-pages-multi deploy -v -s doc/dist -t master",
     "doc-2x": "(cd doc && TARGET=https://koumoul-dev.github.io/vuetify-jsonschema-form/2.x/ nuxt generate) && gh-pages-multi deploy -v -s doc/dist -t 2.x",
     "analyze": "webpack --profile --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
   },
@@ -38,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koumoul-dev/vuetify-jsonschema-form.git"
+    "url": "git+https://github.com/theprosperty/vuetify-jsonschema-form.git"
   },
   "author": "Alban Mouton <alban.mouton@gmail.com>",
   "license": "MIT",
